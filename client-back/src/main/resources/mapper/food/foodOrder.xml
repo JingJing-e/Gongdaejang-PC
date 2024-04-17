@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.icia.clientback.front.food.mapper.FoodOrderMapper">
+
+    <select id="selectOrderNum" resultType="java.lang.String">
+        SELECT
+            order_num
+        FROM order_num
+        ORDER BY id DESC
+            LIMIT 1
+    </select>
+    <insert id="createOrderNum">
+        /* createOrderNum */
+        INSERT INTO order_num (
+                                order_num
+                               , create_time
+        )
+        SELECT
+            CONCAT(DATE_FORMAT(NOW(), '%Y%m%d'),SUBSTR(order_num,9) + 1) order_num
+             , NOW()
+        FROM (
+                 SELECT
+                      ifnull(max(order_num),CONCAT(DATE_FORMAT(NOW(), '%Y%m%d'),'100000') ) order_num
+                 FROM order_num WHERE order_num like CONCAT(DATE_FORMAT(now(), '%Y%m%d'),'%')
+                                   AND create_time LIKE DATE_FORMAT(NOW(), '%Y-%m-%d%')) T
+    </insert>
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO food_order (
+                 member_id
+                 , pc_num
+                 , order_num
+                 , total_price
+                 , pay_type
+                 , request
+        ) VALUES (
+                 #{memberId}
+                 , #{pcNum}
+                 , #{orderNum}
+                 , #{totalPrice}
+                 , #{payType}
+                 , #{request}
+                         )
+    </insert>
+</mapper>

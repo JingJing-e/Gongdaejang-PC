@@ -1,0 +1,1045 @@
+@charset "utf-8"; 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+html, body { 
+	margin:0;padding:0;border:0;background:transparent;font-family: 'Noto Sans';font-size:14px;outline:0;
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width:0px;
+}
+
+.loginTop {
+    height:85vh;
+}
+.loginTop .imgArea {
+    width:100%;
+    height:100%;
+    background: url(/src/assets/images/login.png);
+    background-size: 100% 100%;
+    padding: 0px 60px;
+}
+.loginTop .pcNum {
+    text-align: center;
+    font-size: 7vw;
+    color: #ffffff;
+    text-shadow: 3px 3px 2px  #343434;
+    border-bottom: 3px solid #ffffff;
+}
+/* .loginTop .imgArea img {
+    width:100%;
+    height:100%;
+} */
+.loginBottom {
+    width:100%;
+    height:15vh;
+    background-color: #343434;
+    padding: 0.5vh 0px;
+    box-sizing: border-box;
+}
+.loginBottom .loginWrap {
+    display:flex;
+    height: 100%;
+}
+.loginBottom .loginWrap .leftBox {
+    width: 30%;
+    display: flex;
+    justify-content: end;
+}
+.loginBottom .loginWrap .leftBox .qrArea {
+    min-width: 50px;
+    min-height: 100%;
+    width:15%;
+    height: 90%;
+    background: url(/src/assets/images/qrImage.png);
+    background-size: 100% 100%;
+}
+.loginBottom .loginWrap .rightBox {
+    min-width: 1080px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    background-color: #4f4f4f;
+}
+.loginBottom .loginWrap .rightBox .inputArea {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+}
+.loginBottom .loginWrap .rightBox .inputArea .memberBtnArea {
+    width:25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.loginBottom .loginWrap .rightBox .inputArea .memberBtnArea .memberBtnWrapper{
+    background-color: #343434;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.loginBottom .loginWrap .rightBox .inputArea .memberBtnArea .memberBtnWrapper div{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height:50%;
+    font-size: 16px;
+    color: #4f4f4f;
+    font-weight: bolder;
+    text-align: center;
+}
+.loginBottom .loginWrap .rightBox .inputArea .memberBtnArea .memberBtnWrapper div:first-child{
+    background: #4f4f4f;
+    color:white;
+}
+.loginBottom .loginWrap .rightBox .inputArea .el-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+.loginBottom .loginWrap .rightBox .inputArea .el-form .el-form-item {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 30%;
+    margin:0;
+}
+.loginBottom .loginWrap .rightBox .inputArea .el-form .el-form-item label{
+    min-width: 60px;
+    width: 23%;
+    color: white;
+    font-weight: bolder;
+    text-align: end;
+    margin-right: 10px;
+}
+.loginBottom .loginWrap .rightBox .inputArea .el-form .el-form-item .el-input {
+    width: 70%;
+    height: 100%;
+}
+.loginBottom .loginWrap .rightBox .inputArea .el-form .el-form-item .el-input__wrapper {
+    background-color: #121212;
+}
+.loginBottom .loginWrap .rightBox .inputArea .loginBtnArea {
+    width:20%;
+    margin-right:4px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.loginBottom .loginWrap .rightBox .inputArea .loginBtnArea .loginBtn {
+    height:95%;
+    width: 100%;
+    background-color: #cba7ed;
+    box-shadow: 5px 5px 40px inset rgb(0,0,0,0.2);
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.loginBottom .loginWrap .rightBox .inputArea .loginBtnArea .loginBtn:hover {
+    background-color: #d2b3ef;
+}
+.loginBottom .loginWrap .rightBox .inputArea .etcBtnArea {
+    width:20%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.loginBottom .loginWrap .rightBox .inputArea .etcBtnArea .el-button{
+    width:100%;
+    height:48%;
+    margin: 1% 0;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.loginBottom .loginWrap .rightBox .inputArea .etcBtnArea .el-button:first-child{
+    background-color: rgb(180, 191, 208);
+    color:#ffffff;
+}
+.loginBottom .loginWrap .rightBox .inputArea .etcBtnArea .el-button:first-child:hover{
+    background-color: rgb(161, 178, 204);
+}
+.loginBottom .loginWrap .rightBox .inputArea .etcBtnArea .el-button:last-child{
+    background-color: #f5f5f5;
+}
+.loginBottom .loginWrap .rightBox .textboxArea {
+    width: 25%;
+    background: #54545aba;
+    border-radius: 5px;
+    margin-left:10px;
+    color:#ffffff;
+    padding:1%;
+    overflow: auto;
+}
+.loginBottom .loginWrap .rightBox .btnArea {
+    width:5%;
+    display:flex;
+    justify-content: end;
+}
+.loginBottom .loginWrap .rightBox .btnArea .btnWrap {
+    width:70%;
+    margin: 0px 10%;
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.loginBottom .loginWrap .rightBox .btnArea .btnWrap .el-button {
+    width:100%;
+    height:30%;
+    margin: 3px 0px;
+    background-color: #54545aba;
+    color: #ffff;
+    font-weight: bolder;
+    border:none;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.loginBottom .loginWrap .rightBox .btnArea .btnWrap .el-button:first-child {
+    background-image: url(/src/assets/images/turnoff.png);
+}
+.loginBottom .loginWrap .rightBox .btnArea .btnWrap .el-button:last-child {
+    background-image: url(/src/assets/images/restart.png);
+}
+@media (min-width: 1537px) {
+
+}
+@media (max-width:1536px) {
+
+}
+@media (max-width: 767px) {
+
+}
+
+/* 회원가입 폼 */
+.join-pop header {
+    background: #121212;
+    width:100%;
+    border:none;
+}
+.join-pop .el-dialog__title{
+    color:#ffffff;
+    font-weight: bold;
+}
+.join-pop .el-dialog__body {
+    padding: 0px !important;;
+}
+.join-pop .join-wrap {
+    /* margin-bottom: 50px; */
+    background: #f4f6fa;
+    width:100%;
+    height:100%;
+    padding:25px;
+}
+.join-pop .el-input {
+    height:50px;
+}
+.join-pop .el-form-item label {
+    line-height: 50px;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+.join-pop .deputy label {
+    line-height: 30px;
+    text-align: end;
+}
+.join-pop .row .el-form-item:first-child {
+    width:60%
+}
+.join-pop .row .el-form-item:last-child {
+    width:40%
+}
+.join-pop .btn-area {
+    width:100%;
+    height: 100px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.join-pop .btn-wrap {
+    margin:0 auto;
+    width:100%;
+    height:50%;
+    display: flex;
+    justify-content: center;
+}
+.join-pop .btn-wrap .el-button {
+    width:20%;
+    height:100%;
+}
+.join-pop .btn-wrap .cert {
+    width:50%;
+    height:100%;
+    background-color: #f4f6fa;
+}
+.join-pop .confirm-btn {
+    position:absolute;
+    right:10px;
+}
+@media (min-width: 1537px) {
+
+}
+@media (max-width:1536px) {
+    .join-pop .el-form-item label {
+        font-size:10px;
+        width: 102px!important;
+    }
+    .join-pop .gender label {
+        width:60px!important;
+    }
+}
+@media (max-width: 767px) {
+
+}
+
+
+/* 우측상단 컨트롤 박스 */
+.controll-box-area {
+    width: 100%;
+    height: 100%;
+    background-color: #4f4f4f;
+    color: #b7b7b7;
+    cursor: default;
+}
+.controll-box-area > div {
+    padding: 5px 10px;
+}
+.controll-box-area .header {
+    display:flex;
+    width:100%;
+    background: #343434;
+}
+.controll-box-area .header > div:first-child {
+    -webkit-app-region: drag;
+    width:90%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f4f6fa;
+}
+.controll-box-area .header > div:first-child span {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #b7b7b7;
+}
+.controll-box-area .header > div:last-child {
+    width:10%;
+    text-align: end;
+}
+.controll-box-area .header > div:last-child .el-button {
+    background: #343434;
+    color: #f4f6fa;
+    border:none;
+    /* font-weight: bold; */
+    font-size: 18px;
+    width:80%;
+    cursor:pointer;
+}
+
+
+
+
+.controll-box-area .section1 {
+    display:flex;
+    font-size: 17px;
+    padding: 15px 10px
+}
+.controll-box-area .section1 div {
+    width:50%;
+}
+.controll-box-area .section1 div > span {
+    color: #f4f6fa;
+    font-size:25px;
+}
+.controll-box-area .section1 div:last-child {
+    display: flex;
+    justify-content: flex-end;
+}
+.controll-box-area .section1 div:last-child .el-button {
+    background: #343434;
+    color: #b7b7b7;
+    font-size:20px;
+    padding: 20px 20px;
+    border: 1px solid #707070;
+    margin: 0 3px;
+}
+.controll-box-area .section1 div:last-child .el-button:last-child {
+    border:1px solid #c6c6c6;
+    color: #bbbbbb;
+    font-weight: bold;
+}
+
+
+
+
+.controll-box-area .section2 {
+    display:flex;
+    background: #343434;
+    font-size: 15px;
+    padding: 5px 10px
+}
+.controll-box-area .section2 > div {
+    width: 50%;
+}
+.controll-box-area .section2 > div:first-child {
+    text-align: end;
+}
+.controll-box-area .section2 > div:last-child {
+    text-align: end;
+}
+.controll-box-area .section2 > div:last-child span {
+    cursor: pointer;
+}
+.controll-box-area .section2 > div:last-child span:first-child {
+   padding: 3px 5px;
+}
+.controll-box-area .section2 > div:last-child span:first-child > span {
+    border-right: 1px solid #7b7878;
+    padding: 0 5px;
+}
+
+
+
+
+.controll-box-area .section3 {
+    display:flex;
+    padding: 0px 0px;
+}
+.controll-box-area .section3 > div {
+    width:25%;
+    text-align: center;
+    border-right: 3px solid #343434;
+    border-collapse: collapse;
+    padding: 15px 10px;
+}
+.controll-box-area .section3 > div:first-child {
+    background: #4c2580;
+    color:#ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.controll-box-area .section3 > div:last-child {
+    border: none;
+    color:#cfcf22;
+    font-weight: bold;
+}
+
+
+
+.controll-box-area .section4 {
+    padding: 5px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #343434;
+}
+.controll-box-area .section4 .el-button {
+    width:19.5%;
+    height: 50px;
+    margin: 0px;
+}
+
+
+
+.controll-box-area .section5 {
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #343434;
+}
+.controll-box-area .section5 div {
+    background: #4f4f4f;
+    width:24.5%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.controll-box-area .section6 {
+    background-color: #343434;
+    height:450px;
+    display:flex;
+    padding: 5px 0px;
+}
+.controll-box-area .section6 > div {
+    width:20%;
+    height:100%;
+}
+.controll-box-area .section6 > div:last-child {
+    width:80%;
+    height: 100%;
+    background: url(/src/assets/images/banner.png);
+    background-size: 100% 100%;
+}
+.controll-box-area .section6 > div:first-child > div {
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+}
+.controll-box-area .section6 > div:first-child > div:nth-child(2n-1) {
+    background: #ffffff;
+    width:70%;
+    height:10%;
+    border-radius: 50%;
+}
+.controll-box-area .section6 > div:first-child > div:nth-child(2n) {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+
+/* 메인페이지 상단 헤더 버튼 */
+.home-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.home-header .el-button{
+    width:100%;
+    height:100%;
+    border-radius: 0px;
+    font-weight: bolder;
+}
+.home-header .el-button+.el-button {
+    margin-left: 0px !important;
+    border-left: 1px solid #000000;
+}
+
+
+
+
+
+/* 상품 주문 페이지 */
+.popOrder-container {
+    display: flex;
+    height: 100%
+}
+.popOrder-container .order-wrapper {
+    width:70%;
+    height:100%;
+    background: #343434;
+}
+.popOrder-container .payment-container {
+    width:30%;
+    height:100%;
+}
+.popOrder-container .payment-container .orderInfo-area {
+    width: 100%;
+    height: 50%;
+    background-image: url(/src/assets/images/pay.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.popOrder-container .payment-container .banner-area {
+    height: 10%;
+    background-image: url(/src/assets/images/orderBanner.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.popOrder-container .payment-container .payment-area {
+    background: #360D58;
+    height: 40%
+}
+
+
+@keyframes colorChange {
+    0%, 25%, 40%{
+        color: #e9e9ae
+    }
+    50%, 75%, 100% {
+        color: #FFFF00
+    }
+}
+.popOrder-container .order-wrapper .notice-wrapper {
+    -webkit-app-region: drag;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10%;
+    text-align: center;
+    font-size: larger;
+    font-weight: bolder;
+    animation: colorChange 1.5s infinite;
+    /* color:#FFFF00 */
+}
+.popOrder-container .order-wrapper .notice-wrapper .notice {
+    display:flex;
+    justify-content: center;
+}
+.popOrder-container .order-wrapper .goods-menu-area {
+    display: flex;
+    background: #ffffff;
+    width: 95%;
+    height: 7%;
+    float:right;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 100px 0px 0px 100px;
+    padding-left: 20px;
+    font-weight: bolder;
+    font-size: 16px;
+    margin-bottom: 1%;
+}
+.popOrder-container .order-wrapper .goods-menu-wrapper {
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    height:50%
+}
+.popOrder-container .order-wrapper .goods-menu-wrapper .active{
+    color: #409eff;
+}
+.popOrder-container .order-wrapper .goods-menu-wrapper div{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.popOrder-container .order-wrapper .goods-menu-wrapper div:hover{
+    cursor: pointer;
+    /* color:#409eff; */
+}
+.popOrder-container .order-wrapper .goods-menu-wrapper .searchBox-area{
+    width: 20%;
+    margin-right:20px;
+    position:relative;
+}
+.popOrder-container .order-wrapper .goods-menu-wrapper .searchBox-area .searchBox .el-input__wrapper{
+    border-radius: 50px;
+}
+.popOrder-container .order-wrapper .goods-menu-wrapper .searchBox-area .glass{
+    position:absolute;
+    right: 10px;
+    color: #000000
+}
+
+.popOrder-container .order-wrapper .goods-container {
+    width: 100%;
+    height: 100%;
+}
+
+.popOrder-container .order-wrapper .goods-container .goods-area{
+    width: 100%;
+    height: 80%;
+    display:flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    flex-wrap:wrap;
+    overflow: auto;
+}
+.popOrder-container .order-wrapper .goods-wrapper {
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    width:18.8%;
+    height:35%;
+    margin: 0.6%;
+    background: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.popOrder-container .order-wrapper .goods-wrapper img {
+    height: 80%;
+    border-radius: 5px;
+}
+.popOrder-container .order-wrapper .goods-wrapper div{
+    text-indent: 8px;
+    margin-bottom: 5px;;
+}
+
+
+
+.popOrder-container .payment-container .orderInfo-area .orderInfo-header {
+    display:flex;
+    padding:15px 20px;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-header div{
+    width: 100%;
+    height: 100%;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-header div:first-child > div:first-child{
+    color : #FFFF00;
+    font-weight: 100;
+    margin-bottom:5px;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-header div:first-child > div:last-child{
+    color : #ffffff;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-header > div:last-child{
+    text-align: end;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-header > div:last-child > div:first-child{
+    display:flex;
+    justify-content: flex-end;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-header > div:last-child > div:last-child {
+    color: #ffffff;
+    font-weight: 100;
+    display:flex;
+    justify-content: flex-end;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-header > div:last-child > div:last-child > div {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 0px #dddddd inset;
+    width: 130px;
+    text-align: center;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-header > div:last-child > div:last-child > div:hover{
+    cursor:pointer;
+    background: rgba(255,255,255,0.3);
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-header > div:last-child > div:first-child > div{
+    width: 20px;
+    text-align: center;
+    border-radius: 20px;
+    background: #4f4f4f;
+    cursor: pointer;
+}
+
+.popOrder-container .payment-container .orderInfo-area .orderInfo-container {
+    width: 100%;
+    height: 70%;
+    max-height: 350px;
+    /* height: 300px; */
+    padding: 0px 20px 10px 20px;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-container .orderInfo-wrapper{
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 7px;
+    /* position: relative; */
+    overflow-y: auto;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-container .orderInfo-wrapper .orderInfo{
+    padding: 15px;
+    border-bottom: 1px solid #cdcdcd;
+    font-weight: bolder;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-container .orderInfo-wrapper .orderInfo > div{
+    display:flex;
+    justify-content: space-between;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-container .orderInfo-wrapper .orderInfo > div:first-child{
+    margin-bottom: 10px;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-container .orderInfo-wrapper .orderInfo > div:first-child > div:last-child{
+    cursor: pointer;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-container .orderInfo-wrapper .orderInfo > div > div{
+    display:flex
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-container .orderInfo-wrapper .orderInfo > div:last-child > div:first-child{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-container .orderInfo-wrapper .orderInfo .numBtn {
+    background: #e8e8e8;
+    text-align: center;
+    width:20px;
+    border-radius: 50px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-container .orderInfo-wrapper .orderInfo .numBtn:hover {
+    background: #f1f1f1;
+}
+.popOrder-container .payment-container .orderInfo-area .orderInfo-container .orderInfo-wrapper .totalPrice{
+    position: sticky;
+    background: #dedede;
+    padding: 10px 15px 15px 15px;
+    width:100%;
+    height: 40px;
+    display:flex;
+    justify-content: space-between;
+    bottom:0px;
+    font-weight: bolder;
+}
+
+.popOrder-container .payment-container .payment-area {
+    padding: 15px;
+}
+.popOrder-container .payment-container .payment-area .payBtn {
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: 5px;
+}
+.popOrder-container .payment-container .payment-area .payBtn .active {
+    color: #FFFF00;
+}
+.popOrder-container .payment-container .payment-area .payBtn .el-button{
+    width: 23.5%;
+    height: 50px;
+    margin: 0px 5px 5px 0px;
+}
+.popOrder-container .payment-container .payment-area .payBtn .el-button+.el-button{
+    margin: 0px 5px 5px 0px;
+}
+/* .popOrder-container .payment-container .payment-area .payBtn .el-button:hover{
+    color:#FFFF00
+} */
+
+.popOrder-container .payment-container .payment-area .cashDetail{
+    width: 100%;
+    height: 25%;
+    background: #343434;
+    margin: 10px 0px;
+    padding: 5px 10px;
+}
+.popOrder-container .payment-container .payment-area .cashDetail .el-radio-group{
+    display:flex;
+    justify-content: flex-start;
+}
+.directInput .el-input__inner{
+    width: 70px;
+}
+.popOrder-container .payment-container .payment-area .request-wrapper{
+    margin: 10px 0px;
+}
+.popOrder-container .payment-container .payment-area .orderBtn .el-button{
+    background: #FFFF00;
+    color: #000000;
+    font-weight: bolder;
+    font-size: 17px;
+    width:100%;
+    height: 50px;
+}
+.popOrder-container .payment-container .payment-area .orderBtn .el-button:hover{
+    background: #ffff79;
+}
+
+.chargeOrder-container{
+    width:100%;
+    height:100%;
+    display:flex;
+}
+.chargeOrder-container .charge-container{
+    width:70%;
+    background: #4f4f4f;
+    padding: 40px;
+}
+.chargeOrder-container .charge-container > div:first-child{
+    text-indent: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    -webkit-app-region: drag;
+}
+
+.chargeOrder-container .charge-container .charge-wrapper{
+    height: 80%;
+    background: #121212;
+    border-radius: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.chargeOrder-container .charge-container .charge-wrapper .charge-detail{
+    background: #ffffff;
+    width: 31.6%;
+    height: 34%;
+    margin: 7px;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.chargeOrder-container .charge-container .charge-wrapper .charge-detail > div:first-child{
+    font-size: 13px;
+    color: #aaaaaa;
+    width: 59.5%;
+    padding: 0 10px;
+}
+.chargeOrder-container .charge-container .charge-wrapper .charge-detail > div:last-child{
+    display:flex;
+    justify-content: space-between;
+}
+.chargeOrder-container .charge-container .charge-wrapper .active{
+    background: #409eff;
+    color: #eeeeee;
+}
+.chargeOrder-container .charge-container .charge-wrapper .active > div:first-child{
+    color: #cccccc;
+    border: 1px solid #cccccc;
+    border-radius: 100px;
+}
+.chargeOrder-container .charge-container .notice {
+    height: 20%;
+    color: #dadada;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+    -webkit-app-region: drag;
+}
+
+
+
+
+.chargeOrder-container .info-wrapper{
+    background: #343434;
+    width: 30%;
+    padding: 40px;
+}
+.chargeOrder-container .info-wrapper .user-info{
+    display:flex;
+    height:15%;
+    margin-bottom: 20px;
+}
+.chargeOrder-container .info-wrapper .user-info > div{
+    width: 50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.chargeOrder-container .info-wrapper .user-info > div > div:first-child{
+    font-size: 18px;
+    font-weight: bolder;
+    color: #cdcdcd;
+}
+.chargeOrder-container .info-wrapper .user-info > div+div {
+    border-left: 1px solid #4f4f4f;
+}
+.chargeOrder-container .info-wrapper .user-info > div > div:last-child{
+    color: #7b7878;
+    font-size:16px;
+    font-weight: bolder;;
+}
+.chargeOrder-container .info-wrapper .user-info > div+div div{
+    margin-left: 15px;
+}
+
+.chargeOrder-container .info-wrapper .qr-area{
+    background: #121212;
+    border-radius: 10px;
+    height:65%;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+.chargeOrder-container .info-wrapper .qr-area > div{
+    height: 100%;
+}
+webview{
+}
+.chargeOrder-container .info-wrapper .qr-area > div:first-child > div:first-child{
+    background: #cdcdcd;
+    width: 40%;
+    max-width: 150px;
+    min-width: 125px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 auto;
+    color:#707070;
+}
+.chargeOrder-container .info-wrapper .qr-area > div:first-child > div:nth-child(2){
+    margin: 5px;
+    color:#b7b7b7;
+    font-size: 28px;
+    text-align: center;
+}
+.chargeOrder-container .info-wrapper .qr-area .qr-wrapper{
+    width: 80%;
+    margin: 8px auto;
+    /* margin-top: 20px; */
+    background: #ffffff;
+    border-radius: 7px;
+    height:65%;
+    display:flex;
+}
+.chargeOrder-container .info-wrapper .qr-area .qr-wrapper .qr-code{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.chargeOrder-container .info-wrapper .qr-area .qr-wrapper .qr-code div{
+    background: url(/src/assets/images/qrImage.png);
+    background-size: 100% 100%;
+    width: 95%;
+    height: 95%;
+    margin: 0 auto;
+}
+.chargeOrder-container .info-wrapper .qr-area .qr-wrapper > div:last-child{
+    width: 40%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.chargeOrder-container .info-wrapper .qr-area .qr-wrapper > div:last-child > div{
+    width:100%;
+    height: 70%;
+    border-left: 1px solid #cdcdcd;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.chargeOrder-container .info-wrapper .qr-area .qr-wrapper > div:last-child > div div{
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bolder;
+}
+.chargeOrder-container .info-wrapper .qr-area .qr-wrapper > div:last-child > div div:last-child{
+    color:#d83d3d;
+}
+
+.chargeOrder-container .cancel-btn{
+    background: #707070;
+    height:12%;
+    border-radius: 5px;
+    color:#c6c6c6;
+    font-size:20px;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+.chargeOrder-container .cancel-btn:hover{
+    background: #7b7878;
+}
+
+
+.exit{
+    position: absolute;
+    background: #121212;
+    right:0;
+    top:0;
+    width:40px;
+    height:40px;
+    color:#c6c6c6;
+    font-size:35px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}

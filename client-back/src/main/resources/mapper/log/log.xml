@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.icia.clientback.front.log.mapper.LogMapper">
+    <insert id="insertLog">
+        INSERT INTO log (
+            login_time
+            , member_id
+            , pc_num
+            , type_code
+        )
+        VALUES (
+            now()
+            , #{memberId}
+            , #{pcNum}
+            , #{typeCode}
+               )
+    </insert>
+
+    <update id="updateLog">
+        UPDATE log
+        SET logout_time = now()
+        WHERE member_id = #{memberId}
+        ORDER BY login_time DESC
+        LIMIT 1
+    </update>
+</mapper>

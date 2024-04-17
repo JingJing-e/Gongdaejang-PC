@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.icia.clientback.front.code.mapper.CodeMapper">
+    <sql id="searchConditions">
+        <if test='groupCode != "" and groupCode != null'>
+            and t2.group_code = #{groupCode}
+        </if>
+    </sql>
+    <sql id="selectCodeQuery">
+        SELECT
+            t1.id
+            , t1.code
+            , t1.name
+            , t1.group_id
+            , t1.create_time
+        FROM code t1
+            JOIN code_group t2 ON t2.id = t1.group_id
+    </sql>
+    <select id="get" resultType="com.icia.clientback.front.code.dto.CodeDto">
+        <include refid="selectCodeQuery"></include>
+        WHERE 1=1
+        <include refid="searchConditions"></include>
+        ORDER BY t1.stp ASC
+    </select>
+</mapper>

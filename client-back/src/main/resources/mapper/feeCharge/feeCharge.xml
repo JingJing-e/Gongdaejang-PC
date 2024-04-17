@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.icia.clientback.front.feeCharge.mapper.FeeChargeMapper">
+    <sql id="searchConditions">
+    </sql>
+    <sql id="selectFeeChargeListQuery">
+        SELECT
+            t1.id
+             , t1.name
+             , t1.time
+             , t1.price
+             , t1.use_yn
+             , t1.delete_yn
+             , t1.create_time
+             , t1.update_time
+             , t1.create_id
+             , t1.update_id
+        FROM fee_charge t1
+    </sql>
+    <select id="getList" resultType="com.icia.clientback.front.feeCharge.dto.FeeChargeDto">
+        <include refid="selectFeeChargeListQuery"></include>
+        WHERE 1=1
+        <include refid="searchConditions"></include>
+        ORDER BY id ASC
+    </select>
+</mapper>

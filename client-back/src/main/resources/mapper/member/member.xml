@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.icia.clientback.front.member.mapper.MemberMapper">
+    <sql id="searchConditions">
+        <if test='id != "" and id != null'>
+            AND m.id = #{id}
+        </if>
+        <if test='loginId != "" and loginId != null'>
+            AND m.login_id = #{loginId}
+        </if>
+        <if test='password != "" and password != null'>
+            AND m.password = #{password}
+        </if>
+    </sql>
+
+    <select id="selectMember" resultType="com.icia.clientback.front.member.dto.Member">
+        SELECT
+            m.id
+            , m.login_id
+            , m.password
+            , m.type_code
+            , m.status_code
+            , m.name
+            , m.birth_date
+            , m.gender_code
+            , m.mobile_phone_num
+            , m.address
+            , m.create_time
+            , m.ci
+            , m.di
+            , m.remain_time
+        FROM member m
+        WHERE 1=1
+        <include refid="searchConditions"></include>
+    </select>
+
+    <select id="getDuplicateIdCount" resultType="Integer">
+        SELECT
+            count(1)
+        FROM member
+        WHERE login_id = #{loginId}
+    </select>
+
+    <insert id="insertMember">
+        INSERT INTO member (
+            login_id
+            , password
+            , type_code
+            , status_code
+            , name
+            , birth_date
+            , gender_code
+            , mobile_phone_num
+            , address
+            , ci
+            , di
+        ) VALUES (
+            #{loginId}
+            , #{password}
+            , #{typeCode}
+            , #{statusCode}
+            , #{name}
+            , #{birthDate}
+            , #{genderCode}
+            , #{mobilePhoneNum}
+            , #{address}
+            , #{ci}
+            , #{di}
+                         )
+    </insert>
+
+    <update id="updateMember">
+        UPDATE member
+        SET
+        <if test='remainTime != "" and remainTime != null'>
+            remain_time = #{remainTime}
+        </if>
+        WHERE id = #{id}
+    </update>
+</mapper>
